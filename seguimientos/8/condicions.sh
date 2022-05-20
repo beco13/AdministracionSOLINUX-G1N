@@ -2,7 +2,7 @@
 
 set -e
 
-parametro=$1
+servidor=$1
 
 function install_nginx {
 	yum update
@@ -20,12 +20,12 @@ function install_httpd {
 
 function main {
 
-	if [ "$parametro" == "nginx" ]
+	if [ "$servidor" == "nginx" ]
 		then
 			install_nginx
 	fi
 
-	if [ "$parametro" == "httpd" ]
+	if [ "$servidor" == "httpd" ]
 		then
 			install_httpd
 	fi
